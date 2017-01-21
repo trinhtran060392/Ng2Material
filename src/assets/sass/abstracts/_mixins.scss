@@ -1,0 +1,20 @@
+/* Mixins */
+@mixin animate() {
+  transition: cubic-bezier(.25,.8,.25,1) .25s;
+  transition-property: background;
+}
+@mixin hoverAnimate($background) {
+  transition: cubic-bezier(.25,.8,.25,1) .25s;
+  transition-property: background;
+  background: $background;
+}
+@mixin triangle($width, $color) {
+  border-top: $width solid $color;
+  border-right: $width solid transparent;
+  border-left: $width solid transparent;
+}
+@mixin shortText() {
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}

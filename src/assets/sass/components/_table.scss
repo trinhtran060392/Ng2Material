@@ -1,0 +1,128 @@
+.sr-table {
+  margin-top: $big;
+  border: thin solid $greyBorder2;
+
+  table > thead > tr > th, table > tbody > tr > td {
+    border-bottom: thin solid $greyBorder2;
+    font-size: $small;
+    padding: $default2;
+  }
+  table > thead > tr > th {
+    border-bottom: 0;
+  }
+  table > tbody > tr > td {
+    border-top: 0;
+  }
+
+  table {
+    margin-bottom: 0;
+  }
+  td {
+    vertical-align: middle;
+    &.fixed-width {
+      a {
+        text-overflow: ellipsis;
+        white-space: nowrap;
+        width: 300px;
+        display: block;
+        overflow: hidden;
+      }
+    }
+    .sr-label {
+      margin-left: 0;
+      font-size: $small;
+    }
+    .orange { background: $_orange; }
+    .blue { background: $_blue; }
+    .grey { background: $_grey; }
+    .green { background: $_green; }
+    .red { background: $_red; }
+    &.date-text {
+      color: $grey-dark;
+    }
+  }
+  .glyphicon {
+    color: $greyBorder;
+  }
+  thead tr {
+    background: $greyBorder2;
+  }
+  thead tr, thead th {
+    border-bottom: 0;
+  }
+  thead.tasks th {
+    background-color: $grey-lightest;
+  }
+  tbody tr:last-child td {
+    border-bottom: none;
+  }
+  th a {
+    cursor: pointer;
+    font-size: $small;
+
+    i {
+      font-size: $small;
+    }
+
+    &:hover {
+      text-decoration: none;
+      color: inherit;
+    }
+  }
+  td a {
+    color: $blue;
+    font-size: $small;
+    cursor: pointer;
+  }
+  td span {
+    font-size: $small;
+  }
+  .glyphicon {
+    &.glyphicon-ok {
+      width: auto;
+      left: 0;
+      font-size: $small;
+      color: $white;
+    }
+  }
+  /* checkboxes */
+  button.btn-default {
+    &:hover {
+      background: $white;
+      border-color: $greyBorder;
+    }
+
+    &:active, &:focus, &:visited {
+      background: $white;
+      outline: none;
+      border-color: $greyBorder;
+    }
+  }
+  button.checked {
+    background: $blue;
+
+    &:hover {
+      background: $blue;
+    }
+
+    &:active, &:focus, &:visited {
+      background: $blue;
+      outline: none;
+      border-color: none;
+    }
+  }
+}
+
+.actions-button {
+  display: none;
+}
+.show-actions-button:hover {
+  background: $greyBorder2;
+
+  .actions-button {
+    display: flex;
+  }
+}
+tbody td.fixed-width {
+  min-width: 200px;
+}

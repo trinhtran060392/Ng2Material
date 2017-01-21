@@ -1,0 +1,74 @@
+.modal {
+  text-align: center;
+  padding: 0;
+  &::before {
+    content: '';
+    display: inline-block;
+    height: 100%;
+    vertical-align: middle;
+    margin-right: -4px;
+  }
+  .modal-dialog {
+    display: inline-block;
+    text-align: left;
+    vertical-align: middle;
+  }
+}
+.form-dialog {
+  .modal-dialog {
+    width: 450px;
+    .image-upload-validation {
+      width: 380px;
+      margin: 0 auto;
+      color: $red;
+      font-size: $small;
+      text-align: center;
+      font-weight: bold;
+    }
+    .modal-content {
+      label {
+        text-align: left;
+        font-size: $small;
+        color: $blackGrey;
+      }
+      .percent-upload {
+        margin-top: 25px;
+        div {
+          margin-bottom: 5px;
+          font-size: $small;
+        }
+        span {
+          margin-left: 5px;
+          font-size: 20px;
+          color: $grey-dark;
+        }
+      }
+    }
+    .done-wrapper {
+      padding-bottom: 20px;
+      text-align: left;
+      button {
+        padding: 6px 30px;
+      }
+    }
+  }
+}
+.modal-content {
+  position: relative;
+  padding: 30px 35px 20px;
+  .image-upload-close {
+    position: absolute;
+    border-radius: 50%;
+    background: $white;
+    right: -18px;
+    top: -18px;
+    width: 36px;
+    height: 36px;
+    cursor: pointer;
+    text-decoration: none;
+    box-shadow: -1px 3px 6px $grey-darkest;
+    span {
+      color: $grey-dark;
+    }
+  }
+}

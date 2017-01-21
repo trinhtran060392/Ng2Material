@@ -1,0 +1,20 @@
+.icoicon-delete, .icoicon-download, .icoicon-duplicate, .icoicon-upload-white, .icoicon-add-white,
+.icoicon-arrow-right {
+  display: inline-block;
+  background: transparent url('/assets/images/icons.png') no-repeat;
+  overflow: hidden;
+  text-indent: -9999px;
+  text-align: left;
+  border: none;
+
+  &:hover, &:active, &:focus, &:visited {
+    outline: none;
+  }
+}
+
+.icoicon-delete { background-position: -0px -0px; width: 39px; height: 39px; }
+.icoicon-download { background-position: -0px -39px; width: 39px; height: 39px; margin-top: 1px; }
+.icoicon-duplicate { background-position: -0px -78px; width: 39px; height: 39px; }
+.icoicon-upload-white { background-position: -0px -117px; width: 11px; height: 10px; }
+.icoicon-add-white { background-position: -11px -117px; width: 10px; height: 10px; }
+.icoicon-arrow-right { background-position: -21px -117px; width: 10px; height: 11px; }

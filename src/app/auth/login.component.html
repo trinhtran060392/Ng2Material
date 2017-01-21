@@ -1,0 +1,68 @@
+<div class="login-page" *ngIf="!checkCredentials">
+  <div class="blue" id="blue-block"></div>
+  <div class="login-content" id="login-content">
+    <div class="logo" id="logo">
+      <img src="/assets/images/logo.png" alt="logo" />
+    </div>
+    <div class="login-form">
+      <div class="login-form-title">Welcome back!</div>
+      <div class="login-form-error"></div>
+      <form name="login_form" #userForm="ngForm" >
+        <div class="group">
+          <label>Your Email</label>
+          <input class="form-control" type="email" name="email" id="email" required [(ngModel)]="user.email"  
+            #email="ngModel"
+            ngControl="email"
+            pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$" 
+            [ngClass]="{'has-error' : (email.touched && !email.valid) || formError}"/>
+        </div>
+        <div class="group">
+          <label>Your Password</label>
+          <input class="form-control" type="password" name="password" [(ngModel)]="user.password" id="password" required #password="ngModel" [ngClass]="{'has-error' : (password.touched && !password.valid) || formError}"
+            />
+        </div>
+        <div class="group">
+          <a class="btn btn-primary"  [ngClass]="{'disabled' : !userForm.valid}" (click)="login()">Log In<i class="fa fa-sign-in right" aria-hidden="true"></i></a>
+        </div>
+        <div class="forgot-password">
+          <a href="#" data-toggle="modal" data-target="#forgot-pass">Forgot Password</a>
+        </div>
+      </form>
+    </div>
+    <div class="static-page-links" id="static-page-links">
+      <ul class="flex-right">
+        <li><a href="/docs">Docs</a></li>
+        <li>|</li>
+        <li><a href="/faq">FAQs</a></li>
+        <li>|</li>
+        <li><a href="/about">About us</a></li>
+      </ul>
+    </div>
+  </div>
+  <!-- Modal -->
+  <div id="forgot-pass" class="modal fade forgot-password-form" role="dialog">
+    <div class="modal-dialog">
+
+      <!-- Modal content-->
+      <div class="modal-content">
+        <div class="modal-header">
+          <button type="button" class="close" data-dismiss="modal">&times;</button>
+          <h4 class="modal-title text-center">Forgot your password</h4>
+        </div>
+        <div class="modal-body">
+          <div class="forgot-password-notice">Enter your email blow to receive youy password reset instructions</div>
+          <form>
+            <div class="group form-group">
+              <label>Your Email</label>
+              <input type="email" name="email" ng-model="email" class="form-control" id="forgot-password-email" required />
+            </div>
+          </form>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn-forgot-pass btn btn-primary" ng-click="pass.forgotPassword()">Send Password</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+</div>

@@ -1,20 +1,38 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
-import { FormsModule } from '@angular/forms';
 import { HttpModule } from '@angular/http';
+import { RouterModule } from '@angular/router';
+import { MaterialModule } from '@angular/material';
+
+import { LayoutModule } from './layout/layout.module';
+
+import { AppRouting }     from './app.routing';
 
 import { AppComponent } from './app.component';
+import { DocsComponent } from './static/docs.component';
+import { FaqComponent } from './static/faq.component';
+import { AboutComponent } from './static/about.component';
+import { PageNotFoundComponent } from './static/pagenotfound.component';
+import { CreateTaskDialogComponent } from './template/create-task-dialog.component';
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent, DocsComponent, FaqComponent, AboutComponent, PageNotFoundComponent, CreateTaskDialogComponent
   ],
   imports: [
     BrowserModule,
-    FormsModule,
-    HttpModule
+    HttpModule,
+    RouterModule,
+    MaterialModule.forRoot(),
+    LayoutModule,
+
+    AppRouting
   ],
   providers: [],
-  bootstrap: [AppComponent]
+  bootstrap: [AppComponent],
+  exports: [],
+  entryComponents: [
+    CreateTaskDialogComponent
+  ]
 })
 export class AppModule { }

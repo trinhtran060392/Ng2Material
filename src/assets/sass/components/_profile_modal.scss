@@ -1,0 +1,21 @@
+.profile-modal-form {
+  .profile-modal-title {
+    font-size: $biggest2;
+    text-align: center;
+    color: $black;
+  }
+
+  .profile-modal-content {
+    margin-top: $middleBig2;
+    text-align: center;
+
+    p {
+      font-size: $small;
+      margin-bottom: $middleBig2;
+    }
+
+    button:last-child {
+      margin-left: 15px;
+    }
+  }
+}

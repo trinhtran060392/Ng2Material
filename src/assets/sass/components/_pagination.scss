@@ -1,0 +1,27 @@
+.sr-pagination {
+  text-align: center;
+  .pagination {
+
+    li {
+      a {
+        cursor: pointer;
+        min-width: 50px;
+        border-radius: 3px;
+        border: 1px solid $greyBorder;
+        color: $greyBorder;
+        box-shadow: 0px 2px 3px 0px rgba(0, 0, 0, 0.1);
+      }
+      &.active {
+        a {
+          background-color: $blue;
+          color: $white;
+        }
+      }
+      &:not(:first-child) {
+        a {
+          margin-left: 10px;
+        }
+      }
+    }
+  }
+}

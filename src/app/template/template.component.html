@@ -1,0 +1,150 @@
+<div class="container page-templates">
+  <div class="flex flex-content-start flex-align-items-center">
+    <div>
+      <div class="page-templates-title">
+        Template
+      </div>
+    </div>
+    <div>
+      <div class="page-templates-count">
+        3 / 20
+      </div>
+     
+    </div>
+  </div>
+  <div class="page-templates-buttons flex flex-content-between flex-align-items-end">
+    <div>
+      <div class="page-templates-buttons flex flex-content-start flex-align-items-start">
+        <div>
+          <button type="button" class="btn btn-primary" ng-click="templates.newTemplate()">
+            <i class="glyphicon glyphicon-plus"></i>
+            &nbsp;New Template
+          </button>
+        </div>
+        <div>
+          <div class="btn-group">
+            <button type="button" class="btn btn-default" uib-btn="'left'" data-toggle="modal"
+              data-target="#dub-temp">
+              <i class="glyphicon glyphicon-book"></i>
+            &nbsp;Dublicate
+            </button>
+            <button type="button" class="btn btn-default" uib-btn="'right'" data-toggle="modal"
+              data-target="#del-temp">
+              <i class="glyphicon glyphicon-trash"></i>
+            &nbsp;Delete
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div>
+      <button type="button" class="btn btn-default" (click)="openDialog()">
+        <i class="glyphicon glyphicon-plus"></i>
+        &nbsp;Create Task
+      </button>
+    </div>
+  </div>
+  <div class="page-templates-list">
+    <div class="table-responsive">
+      <table class="table">
+        <thead>
+          <tr>
+            <th>
+                           <md-checkbox
+                >
+     dd
+                </md-checkbox>
+            </th>
+            <th>
+              <a href="#">
+                Name&nbsp;
+                <i class="glyphicon glyphicon-sort"></i>
+              </a>
+            </th>
+            <th>
+              <a href="#">
+                Output Type&nbsp;
+                <i class="glyphicon glyphicon-sort"></i>
+              </a>
+            </th>
+            <th>
+              <a href="#">
+                Create Date&nbsp;
+                <i class="glyphicon glyphicon-sort"></i>
+              </a>
+            </th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>
+              <md-checkbox
+                >
+     dd
+                </md-checkbox>
+            </td>
+            <td>
+              <a href="">Name</a>
+            </td>
+            <td>
+              CSV
+            </td>
+           
+            <td>
+              <div class="user-role flex flex-content-between flex-align-items-center">
+                <div>
+                  20/11
+                </div>
+                <div>
+                  <button type="button" class="btn btn-default" data-toggle="modal" data-target="#create-task">
+                    <i class="glyphicon glyphicon-plus"></i>
+                    &nbsp;Create Task
+                  </button>
+                </div>
+              </div>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+  <!-- Modal -->
+  <div id="create-task" class="modal fade create-task-form" role="dialog">
+    <div class="modal-dialog">
+
+      <!-- Modal content-->
+      <div class="modal-content">
+        <div class="modal-header">
+          <button type="button" class="close" data-dismiss="modal">&times;</button>
+          <div class="create-task-title">Create Task</div>
+        </div>
+        <div class="modal-body">
+          <div class="create-task-content flex flex-content-around flex-align-items-start">
+            <div>
+              <label>Select Images Asset</label>
+              <select class="form-control">
+                <option ng-repeat="image in create.images">Image Name</option>
+              </select>
+            </div>
+            <div>
+              <label>Select Meta</label>
+              <select class="form-control">
+                <option value="Invoice">Invoice</option>
+                <option value="Invoice">Invoice</option>
+                <option value="Invoice">Invoice</option>
+              </select>
+            </div>
+          </div>
+          <div class="check">
+            <div>
+              <md-checkbox>Start this Task now</md-checkbox>
+            </div>
+            <div>
+              <button class="btn btn-primary">Create Task</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

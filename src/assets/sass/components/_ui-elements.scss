@@ -1,0 +1,146 @@
+.group-input {
+  margin: $middleBig2 0 0;
+  input {
+    padding: $biggest $small $biggest;
+    background-color: $darkGrey;
+    color: $blackGrey;
+    font-size: $small;
+    border: none;
+    &.small {
+      padding: $verySmall $small $verySmall;
+    }
+  }
+}
+
+.input-small {
+  padding: 18px 12px 18px;
+  background-color: $darkGrey;
+  color: $blackGrey;
+  font-size: $small;
+  border: none;
+}
+.sr-label {
+  background: $blue;
+  color: #FFFFFF;
+  font-size: $default;
+  text-align: center;
+  padding: 5px 15px 6px;
+  border-radius: 16px;
+  margin-left: 11px;
+  font-weight: normal;
+  &.processing {
+    background-color: $orange;
+  }
+  &.done {
+    background-color: $green;
+  }
+  &.quene {
+    background-color: $pseudoBlack;
+  }
+}
+
+.btn {
+  &.btn-primary {
+    border: none;
+    outline: 0;
+    i {
+      color: $white;
+    }
+    &:hover {
+      background-color: $blue-hover;
+    }
+    &:visited, &:focus, &:active {
+      background-color: $btn-primary-bg;
+      outline: 0;
+      &:hover {
+        background-color: $blue-hover;
+      }
+    }
+  }
+  &.btn-default {
+    &:hover {
+      background-color: $grey-light;
+    }
+    &:visited, &:focus, &:active {
+      background-color: $btn-default-bg;
+      outline: 0;
+      border-color: $btn-default-border;
+      &:hover {
+        background-color: $grey-light;
+      }
+    }
+  }
+}
+
+.download-btn {
+  position: relative;
+  padding: 10px 16px;
+  border: 1px solid $greyBorder;
+  cursor: pointer;
+  box-shadow: 0px 2px 3px 0px rgba(0, 0, 0, 0.1);
+  img {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    left: 0;
+    right: 0;
+    margin: auto;
+  }
+}
+
+.error-valid {
+  border: thin solid $red;
+}
+
+.blue-round {
+  background: $blue;
+  color: $white;
+  font-size: $default;
+  font-weight: normal;
+  text-align: center;
+  padding: 7px 25px 7px;
+  border-radius: $default;
+}
+
+.modal-dialog {
+  .btn-default, .btn-danger {
+    min-width: 70px;
+  }
+  .btn-danger, .btn-primary {
+    margin-left: $small;
+  }
+}
+.sr-select {
+  position: relative;
+  select.form-control {
+    width: 100%;
+    padding-right: 20px;
+    appearance: none;
+    -moz-appearance: none;
+    -webkit-appearance: none;
+    box-shadow: none;
+    color: $black;
+    background: $grey-darkest;
+    border-radius: $border-radius-small;
+    border: none;
+    &::-ms-expand {
+      display: none;
+    }
+  }
+  &::after {
+    content: '';
+    position: absolute;
+    color: blue;
+    right: 5px;
+    top: 50%;
+    transform: translateY(-50%);
+    @include triangle(5px, $black);
+    pointer-events: none;
+  }
+
+}
+.sk-select {
+  font-size: $small;
+  background: $grey-darkest;
+  border: none;
+}

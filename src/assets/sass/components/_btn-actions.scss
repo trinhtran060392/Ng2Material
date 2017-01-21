@@ -1,0 +1,37 @@
+.btn-actions {
+  display: flex;
+  .btn-delete {
+    margin: 0 10px;
+  }
+  .glyphicon {
+    color: $greyBorder;
+  }
+}
+
+.btn-delete, .btn-duplicate {
+  position: relative;
+  padding-left: 25px;
+  &:before {
+    position: absolute;
+    left: 10px;
+    height: 18px;
+    top: 50%;
+    transform: translateY(-50%);
+  }
+}
+.btn-duplicate {
+  &:before {
+    content: url('/assets/images/icon_dulicate.png');
+  }
+}
+.btn-delete {
+  &:before {
+    content: url('/assets/images/icon_delete.png');
+  }
+}
+.btn-add {
+  .glyphicon {
+    color: $greyBorder;
+    font-size: $small;
+  }
+}

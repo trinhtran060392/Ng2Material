@@ -1,0 +1,20 @@
+.confirmation-form {
+  .confirmation-title {
+    font-size: $biggest2;
+    text-align: center;
+    color: $black;
+  }
+
+  .confirmation-content {
+    margin-top: $middleBig2;
+    text-align: center;
+    .btn-primary {
+      border: 1px solid transparent;
+      min-width: 70px;
+    }
+    p {
+      font-size: $small;
+      margin-bottom: $middleBig2;
+    }
+  }
+}

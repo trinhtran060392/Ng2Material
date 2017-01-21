@@ -1,0 +1,47 @@
+$black      : #333333;
+$white      : #FFFFFF;
+$fSizeSmall   : 14px;
+
+.header {
+	.navigation {
+    display: block;
+    width: 100%;
+    background: $white;
+    padding: 10px;
+    font-size: 12px;
+    a {
+      font-size: 12px;
+    }
+    .navigation-container {
+      .navigation-container-nav-side {
+        div:not(:last-child) {
+          margin-right: 50px;
+        }
+
+        a:hover {
+          color: $black;
+        }
+      }
+
+      .navigation-container-signout-button {
+        a {
+          display: inline-block;
+          padding: 10px;
+          text-align: center;
+          color: $white;
+          background-color: #424242;
+          border-radius: 3px;
+
+          &:hover {
+            text-decoration: none;
+          }
+        }
+      }
+    }
+  }
+}
+
+.footer {
+  height: 200px;
+  background: white;
+}

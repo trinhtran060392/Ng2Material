@@ -1,0 +1,12 @@
+$br-large: 5px; //border radius large size
+.progress {
+  width: 380px;
+  margin: 0 auto;
+  height: 10px;
+  border-radius: $br-large;
+}
+.progress-bar {
+  background-color: $green-lighten;
+  border-radius: $br-large;
+  box-shadow: none;
+}

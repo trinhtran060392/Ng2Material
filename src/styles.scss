@@ -1,0 +1,30 @@
+/* You can add global styles to this file, and also import other style files */
+
+/* Var */
+@import 'assets/sass/abstracts/variables';
+@import 'assets/sass/abstracts/mixins';
+
+@import 'assets/sass/base/colors';
+
+@import 'assets/sass/vendors/bootstrap-override-variable';
+
+@import 'assets/sass/layout/content';
+
+@import 'assets/sass/components/flex';
+@import 'assets/sass/components/font';
+@import 'assets/sass/components/scrollbar';
+@import 'assets/sass/components/modal-form';
+@import 'assets/sass/components/template';
+@import 'assets/sass/components/ui-elements';
+@import 'assets/sass/components/profile-form';
+@import 'assets/sass/components/table';
+@import 'assets/sass/components/font';
+@import 'assets/sass/components/dialog';
+@import 'assets/sass/components/progress-bar';
+@import 'assets/sass/components/confirmation-dialog-form';
+@import 'assets/sass/components/btn-actions';
+
+@import 'assets/sass/layout/content';
+@import 'assets/sass/abstracts/shame';
+
+@import '~@angular/material/core/theming/prebuilt/deeppurple-amber.css';

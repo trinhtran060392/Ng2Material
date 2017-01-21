@@ -1,0 +1,18 @@
+.main-container {
+  .container {
+    background: $white;
+    min-height: calc(100vh - 60px);
+  }
+}
+.navigation {
+  &.detail-page {
+    background: $grey;
+    padding: 0;
+    border-bottom: none;
+    .container {
+      padding: $small;
+      background: $white;
+      border-bottom: 1px solid $darkGrey;
+    }
+  }
+}
