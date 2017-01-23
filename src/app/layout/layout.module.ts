@@ -3,7 +3,7 @@ import { NgModule } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 import { HttpModule } from '@angular/http';
 import { RouterModule } from '@angular/router';
-
+import { MaterialModule } from '@angular/material';
 import { LayoutComponent } from './layout.component';
 import { LayoutDetailComponent } from './layout-detail.component';
 
@@ -15,7 +15,8 @@ import { LayoutDetailComponent } from './layout-detail.component';
     CommonModule,
     FormsModule,
     HttpModule,
-    RouterModule
+    RouterModule,
+    MaterialModule
   ],
   exports: [ LayoutComponent, LayoutDetailComponent]
 })

@@ -26,6 +26,43 @@
             </span>
           </div>
         </div>
+        <div class="navigation-container-signout-button">
+        <div class="navigation-container-nav-side flex flex-content-start flex-align-items-center">
+          <div>
+            <div class="nav" id="nav">
+              <!-- this menu starts as hidden by default -->
+              <md-menu>
+                  <button md-menu-item> Refresh </button>
+                  <button md-menu-item> Settings </button>
+                  <button md-menu-item> Help </button>
+                  <button md-menu-item disabled> Sign Out </button>
+              </md-menu>
+            </div>
+          </div>
+          <div>
+            <div class="user-nav" id="user-nav">
+              <a>
+                Hi&nbsp;
+                <i class="glyphicon glyphicon-triangle-bottom"></i>
+              </a>
+              <div class="user-nav-links">
+                <a ui-sref="main-app.profile">
+                  My Profile
+                </a>
+                <a ui-sref="main-app.profile-edit">
+                  Edit Profile
+                </a>
+                <a ui-sref="main-app.profile-change-password">
+                  Change Password
+                </a>
+                <a ng-click="nav.signOut()">
+                  Logout
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
       </div>
     </div>
   </div>
