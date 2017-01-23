@@ -1,0 +1,33 @@
+<header class="header">
+  <div class="navigation detail-page" id="navigation" ng-controller="NavigationController  as nav">
+    <div class="container navigation-container">
+      <div class="flex flex-content-between flex-align-items-center">
+        <div>
+          <div class="navigation-container-nav-side flex flex-content-start flex-align-items-center">
+            <span>
+              <a [routerLink]="['/dashboard']">
+                <img src="/assets/images/logo-demo.png" alt="logo" />
+              </a>
+            </span>
+            <span class="nav-elem first">
+              <a [routerLink]="['/docs']">Docs</a>
+            </span>
+            <span class="nav-elem">
+              |
+            </span>
+            <span class="nav-elem">
+              <a [routerLink]="['/faq']">FAQs</a>
+            </span>
+            <span class="nav-elem">
+              |
+            </span>
+            <span class="nav-elem">
+              <a [routerLink]="['/about']">About us</a>
+            </span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</header>
+<router-outlet></router-outlet>

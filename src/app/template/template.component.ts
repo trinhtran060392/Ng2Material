@@ -5,24 +5,25 @@ import { AuthenticationService } from '../auth/auth.service';
 import { CreateTaskDialogComponent } from './create-task-dialog.component';
 
 @Component({
+  selector: '.main-container',
   templateUrl: './template.component.html',
   styleUrls: ['./template.component.scss'],
   providers: [TemplateService, AuthenticationService]
 })
 
 export class TemplateComponent {
-    
+
   dialogRef: MdDialogRef<CreateTaskDialogComponent>;
 
   constructor(private service : TemplateService, private authService : AuthenticationService, public dialog: MdDialog) {
 
   }
-  projects: any[];
+  projects : any[];
   ngOnInit() {
-    //this.authService.checkCredentials();
-    //this.service.getProjects(localStorage.getItem("user")).subscribe(res => {
-      //console.log(res);
-    //});
+    this.authService.checkCredentials();
+    this.service.getProjects(localStorage.getItem("user")).subscribe(res => {
+      this.projects = res.projects;
+    });
   }
   openDialog() {
     this.dialogRef = this.dialog.open(CreateTaskDialogComponent, {

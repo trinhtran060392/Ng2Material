@@ -1,6 +1,54 @@
 $white      : #FFFFFF;
 $blue       : #249EDB;
 $black      : #333333;
+$veryBig   : 50px;
+$middleBig : 43px;
+$middleBig2: 30px;
+$biggest   : 25px;
+$biggest2  : 24px;
+$big       : 20px;
+$default   : 16px;
+$default2  : 15px;
+$middle    : 14px;
+$small     : 12px;
+$verySmall : 10px;
+$grey       : #F4F8F9;
+$darkGrey   : #ECEFF1;
+$blackGrey  : #A5A5A5;
+$black      : #333333;
+$lightBlack : #555555;
+$white      : #FFFFFF;
+$blue       : #249EDB;
+$greyBorder : #9AABB3;
+$greyBorder2: #F9F9F9;
+$yellow     : #E6E600;
+$orange     : #ff7d2e;
+$green      : #2cc557;
+$pseudoBlack: #5d5d5d;
+$red        : #EE2828;
+
+$grey-darkest: #888888;
+$grey-dark  : #777777;
+$grey-darken: #dfdfdf;
+$grey-light: #e6e6e6;
+$grey-lighten: #88979e;
+$grey-lightest: #fcfcfc;
+$grey-darkest: #e5ecef;
+$green-lighten: #12BA61;
+
+$blue-hover :#2c79ba;
+
+/* colors for labels */
+
+$_green: #2dc558;
+$_orange: #ff7d2F;
+$_grey: #5d5d5d;
+$_blue: #249fdb;
+$_red: #ff2c2b;
+
+/* colors for buttons */
+
+$danger: #d43f3a;
 
 .page-dashboard {
   widows: 100%;
@@ -11,12 +59,19 @@ $black      : #333333;
     height: 100%;
     width: 588px;
     margin: 0 auto;
-    padding-top: 250px;
+    padding: 20vh 0;
+
     .block {
       width: 279px;
       height: 343px;
       background-color: $white;
       box-shadow: -0.2px 2px 5px 0 rgba(0, 0, 0, 0.1);
+      transition: all 0.3s ease;
+      &:hover {
+          margin-top: -20px;
+          box-shadow: -0.2px 5px 15px 5px rgba(0, 0, 0, 0.05);
+          transition: all 0.3s ease;
+      }
 
       .block-logo {
         text-align: center;
@@ -24,36 +79,33 @@ $black      : #333333;
       }
 
       .block-title {
-        font-size: 24px;
+        font-size: $biggest2;
         color: $black;
         text-align: center;
-        padding-top: 15px;
+        padding-top: $default2;
       }
 
       .block-quantity {
         text-align: center;
-        padding-top: 15px;
+        padding-top: $default2;
 
         div {
           display: inline-block;
           width: auto;
-          padding: 4px 10px 3px;
-          border-radius: 14px;
+          padding: 4px $small 3px;
+          border-radius: $middle;
           background-color: $white;
           box-shadow: -0.2px 2px 3px 0 rgba(0, 0, 0, 0.1);
-          border: solid 1px #9aabb3;
+          border: solid 1px $greyBorder;
           margin: 0 auto;
         }
       }
 
       .block-buttons {
-        padding-top: 50px;
-        text-align: center;
-
+        padding-top: $veryBig;
         button.btn-primary {
-          background-color: $blue;
           border: thin solid $blue;
-
+          margin-right: 5px;
           i {
             color: $white;
           }

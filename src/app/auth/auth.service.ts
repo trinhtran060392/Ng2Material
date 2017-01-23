@@ -14,7 +14,7 @@ export class AuthenticationService {
 
   constructor(private _router: Router, private http: Http, private location : Location){}
 
-  api = 'http://localhost:3000';
+  api = 'https://skrc.framgia.vn/api/v1';
   logout() {
     localStorage.removeItem("user");
     this._router.navigate(['/']);
@@ -22,7 +22,7 @@ export class AuthenticationService {
 
   login(user): Observable<any> {
 
-    return this.http.post(this.api+'/api/v1/users/login', user).map(res => res || {}).catch(this.handleError);
+    return this.http.post(this.api+'/users/login', user).map(res => res || {}).catch(this.handleError);
   }
 
   private handleError (error: Response | any) {
@@ -46,7 +46,7 @@ export class AuthenticationService {
         this._router.navigate(["/dashboard"]);
       }
     }
-  } 
+  }
   isAuthenticated() {
     if (localStorage.getItem("user")) return true;
     else return false;

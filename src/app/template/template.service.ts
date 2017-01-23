@@ -12,13 +12,13 @@ export class TemplateService {
 
   constructor(private _router: Router, private http: Http, private location : Location){}
 
-  api = 'http://localhost:3000';
+  api = 'https://skrc.framgia.vn/api/v1';
 
 
-  getProjects(token: any): Observable<any[]> {
+  getProjects(token: any): Observable<any> {
     let headers = new Headers({ 'Content-Type': 'application/json', "X-Skyrec-Access-Token" : token  });
     let options = new RequestOptions({ headers : headers});
-    return this.http.get(this.api+'/api/v1/projects', options).map(res => res || {}).catch(this.handleError);
+    return this.http.get(this.api+'/projects', options).map(res => (<Response>res).json() || {}).catch(this.handleError);
   }
 
   private handleError (error: Response | any) {
@@ -31,7 +31,6 @@ export class TemplateService {
     } else {
       errMsg = error.message ? error.message : error.toString();
     }
-    console.error(errMsg);
     return Observable.throw(errMsg);
   }
 }

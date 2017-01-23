@@ -5,10 +5,11 @@ import { HttpModule } from '@angular/http';
 import { RouterModule } from '@angular/router';
 
 import { LayoutComponent } from './layout.component';
+import { LayoutDetailComponent } from './layout-detail.component';
 
 @NgModule({
   declarations: [
-    LayoutComponent
+    LayoutComponent, LayoutDetailComponent
   ],
   imports: [
     CommonModule,
@@ -16,7 +17,7 @@ import { LayoutComponent } from './layout.component';
     HttpModule,
     RouterModule
   ],
-  exports: [ LayoutComponent]
+  exports: [ LayoutComponent, LayoutDetailComponent]
 })
 
 export class LayoutModule {}

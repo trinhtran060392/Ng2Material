@@ -30,7 +30,7 @@ export class LoginComponent {
 	login() {
     this.service.login(this.user).subscribe(res => {
       if (res.status === 201) {
-        this.service.setCookie(res.json().token.token);
+        this.service.setCookie(res.json().user_token.token);
         this.router.navigate(["/dashboard"]);
       } else this.formError = true;
     });

@@ -2,12 +2,12 @@ import { NgModule }             from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 
 import { TemplateComponent } from './template.component';
-import { LayoutComponent } from '../layout/layout.component';
+import { LayoutDetailComponent } from '../layout/layout-detail.component';
 
 const templateRoute: Routes = [
   {
     path: '',
-    component: LayoutComponent,
+    component: LayoutDetailComponent,
     children: [
       {
         path: '',

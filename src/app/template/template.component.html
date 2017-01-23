@@ -9,7 +9,7 @@
       <div class="page-templates-count">
         3 / 20
       </div>
-     
+
     </div>
   </div>
   <div class="page-templates-buttons flex flex-content-between flex-align-items-end">
@@ -45,58 +45,61 @@
     </div>
   </div>
   <div class="page-templates-list">
-    <div class="table-responsive">
+    <div class="sr-table">
       <table class="table">
         <thead>
           <tr>
             <th>
-                           <md-checkbox
-                >
-     dd
-                </md-checkbox>
+              <md-checkbox></md-checkbox>
             </th>
             <th>
-              <a href="#">
+              <a>
                 Name&nbsp;
                 <i class="glyphicon glyphicon-sort"></i>
               </a>
             </th>
             <th>
-              <a href="#">
+              <a>
                 Output Type&nbsp;
                 <i class="glyphicon glyphicon-sort"></i>
               </a>
             </th>
             <th>
-              <a href="#">
+              <a>
                 Create Date&nbsp;
                 <i class="glyphicon glyphicon-sort"></i>
               </a>
             </th>
+            <th>
+              <a>
+                Update Date&nbsp;
+                <i class="glyphicon glyphicon-sort"></i>
+              </a>
+            </th>
+            <th></th>
           </tr>
         </thead>
         <tbody>
-          <tr>
+          <tr *ngFor="let project of projects">
             <td>
-              <md-checkbox
-                >
-     dd
-                </md-checkbox>
+              <md-checkbox></md-checkbox>
+            </td>
+            <td class="fixed-width">
+              <a>{{ project.project_name }}</a>
             </td>
             <td>
-              <a href="">Name</a>
+              {{ project.output_type }}
             </td>
             <td>
-              CSV
+              {{ project.created_at }}
             </td>
-           
+            <td>
+              {{ project.updated_at }}
+            </td>
             <td>
               <div class="user-role flex flex-content-between flex-align-items-center">
                 <div>
-                  20/11
-                </div>
-                <div>
-                  <button type="button" class="btn btn-default" data-toggle="modal" data-target="#create-task">
+                  <button type="button" class="btn btn-default" create-task-modal data-project="template.id" data-imageselect="false" data-projectselect="true" data-title="template.project_name">
                     <i class="glyphicon glyphicon-plus"></i>
                     &nbsp;Create Task
                   </button>
