@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
-import { MdMenu } from "@angular/material";
+import { MdMenu, MdMenuTrigger } from "@angular/material";
+import { ViewChild } from '@angular/core';
 
 import { AuthenticationService } from '../auth/auth.service';
 
@@ -12,10 +13,15 @@ import { AuthenticationService } from '../auth/auth.service';
 export class LayoutDetailComponent {
   title = 'app works!';
 
+  @ViewChild(MdMenuTrigger) trigger: MdMenuTrigger;
   constructor(private service: AuthenticationService) {
   }
 
   logout() {
     this.service.logout();
+  }
+
+  someMethod() {
+    this.trigger.openMenu();
   }
 }
